@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 报错,foo此时等于undefined,undefined.bar 就会报错
+        // var {foo: {bar}} = {baz: 'baz'};
+
+        let { log, sin, cos } = Math;
+        console.log(log, sin, cos);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

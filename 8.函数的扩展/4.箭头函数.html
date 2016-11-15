@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var f = v => v;
+
+        console.log(f(123));
+        // 等同于
+        // function f (v) {
+        //     return v;
+        // }
+
+        var f2 = () => 5;
+        console.log(f2());
+
+        var f3 = (num1, num2) => num1 + num2;
+        console.log(f3(12, 6));
+
+        var sum = (num1, num2) => {return num1 + num2};
+        console.log(sum(66, 22));
+
+        var get = id => ({id: id, name: 'i++'});
+        console.log(get(123));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

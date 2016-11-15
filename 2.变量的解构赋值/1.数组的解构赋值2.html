@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 报错,如果等号右边不是数组(不是可遍历的结构),则会报错
+        let [foo] = 12;
+        let [foo] = 'aa';
+        let [foo] = false;
+        let [foo] = undefined;
+        let [foo] = NaN;
+        let [foo] = null;
+        let [foo] = {};
+    </script>
+</head>
+<body>
+
+</body>
+</html>

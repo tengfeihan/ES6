@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        function show ([x = 12, y = 6] = []) {
+//            console.log(x, y);
+//        }
+//        show();
+
+
+        function move({x = 0, y = 0} = {}) {
+            return [x, y];
+        }
+        console.log(move({x: 3, y: 8})); // [3, 8]
+        console.log(move({x: 3})); // [3, 0]
+        console.log(move({})); // [0, 0]
+        console.log(move()); // [0, 0]
+
+
+        function move({x, y} = { x: 0, y: 0 }) {
+            return [x, y];
+        }
+        console.log(move({x: 3, y: 8})); // [3, 8]
+        console.log(move({x: 3})); // [3, undefined]
+        console.log(move({})); // [undefined, undefined]
+        console.log(move()); // [0, 0]
+    </script>
+</head>
+<body>
+
+</body>
+</html>

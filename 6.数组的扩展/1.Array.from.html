@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        var aDiv = document.querySelectorAll('div');
+        console.log(Array.from(aDiv));
+
+        function fn () {
+            console.log(typeof arguments);
+        }
+        fn(1, 2, 3, 4);
+
+        function fn2 () {
+            console.log([...arguments]);
+        }
+        fn2(1, 2, 3, 4);
+
+        console.log(Array.from([1, 2, 3], x => x * x));
+
+    </script>
+</body>
+</html>

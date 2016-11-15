@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 此时y还没有被声明
+        function show (x = y, y = 12) {
+            console.log(x, y);
+        }
+
+        show();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

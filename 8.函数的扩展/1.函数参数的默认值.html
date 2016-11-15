@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function fn (x, y = 'world') {
+            console.log(x, y);
+        }
+
+        fn('hello');  // hello world
+        fn('hello', 'china');   // hello china
+        fn('hello', '');   // hello china
+
+        // 报错,默认参数不能使用let或const再次声明
+//        function fn2 (x = 12) {
+//            let x = 5;
+//        }
+//        fn2();
+
+        function fn3 ({x = 2, y =3} = {}) {
+            console.log(x, y);
+        }
+        fn3({x: 55})
+    </script>
+</head>
+<body>
+
+</body>
+</html>

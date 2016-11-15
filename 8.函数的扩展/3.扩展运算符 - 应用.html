@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 1、合并数组
+        console.log(...[1, 2, 3], ...[66, 7, 8], ...[11, 22]);
+
+        // 2、和解构赋值结合
+        let list = [1, 2, 3, 4, 66, 11];
+        [a, ...rest] = list;
+
+        // 3、函数的返回值
+        function fn () {
+            return [1, 2, 3];
+        }
+        console.log(...fn());
+
+        // 4、字符串
+        function length(str) {
+            return [...str].length;
+        }
+
+        length('x\uD83D\uDE80y') // 3
+    </script>
+</head>
+<body>
+
+</body>
+</html>

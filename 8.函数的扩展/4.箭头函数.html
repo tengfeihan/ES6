@@ -23,6 +23,24 @@
 
         var get = id => ({id: id, name: 'i++'});
         console.log(get(123));
+
+        const full = ({first, last}) => first + ' '+ last;
+        console.log(full({first: 12, last: 22}));
+//        等同于
+//        function full (json) {
+//            return json.first + ' '+ json.last;
+//        }
+
+        const isEven = n => n % 2 === 0;
+        console.log(isEven(23));
+
+        // 简化回调函数
+        console.log([1, 2, 3].map(function (value, key, arr) {
+            return value * value;
+        }));
+
+        // sort
+        console.log([13, 55, 32, 66].sort((n1, n2) => n1 - n2));
     </script>
 </head>
 <body>

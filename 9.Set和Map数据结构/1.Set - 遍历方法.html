@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let set = new Set(['red', 'green', 'blue']);
+
+        for (let item of set.keys()) {
+            console.log(item);
+        }
+        // red
+        // green
+        // blue
+
+        for (let item of set.values()) {
+            console.log(item);
+        }
+        // red
+        // green
+        // blue
+
+        for (let item of set.entries()) {
+            console.log(item);
+        }
+        // ["red", "red"]
+        // ["green", "green"]
+        // ["blue", "blue"]
+
+        let s = new Set([1, 2, 3]);
+        s.forEach((value, key) => console.log(value * 2));
+        console.log(s);
+        console.log([...s]);
+
+        // 数组去重
+        console.log([...new Set([1,1,1,1,1,2,2,2,2,3,3,3,22])]);
+
+        // map和filter
+        let s2 = new Set([1, 2, 3]);
+        s2 = new Set([...s2].map(x => x * 2));
+        console.log(s2);
+        let s3 = new Set([1, 2, 3, 4, 5]);
+        console.log(new Set([...s3].filter(x => x % 2 === 0)));
+
+
+        // 数组的交集、并集、差集
+        // 交集
+        let a1 = new Set([1, 2, 3, 4, 5]);
+        let a2 = new Set([2, 3, 4, 7, 8]);
+        console.log([...new Set([...a1, ...a2])]);
+
+        // 并集
+        console.log([...new Set([...a1].filter(x => a2.has(x)))]);
+
+        // 差集
+        console.log([...new Set([...a1].filter(x => !a2.has(x)))]);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
